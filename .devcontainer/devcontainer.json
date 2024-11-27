@@ -1,8 +1,6 @@
 {
     "name": "Julia Development",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
         "ghcr.io/julialang/devcontainer-features/julia:1": {
             "version": "1.9"
@@ -14,8 +12,5 @@
                 "julialang.language-julia"
             ]
         }
-    },
-    "postCreateCommand": {
-        "julia-packages": "julia --startup-file=no -e 'using Pkg; Pkg.add([\"PkgTemplates\", \"JuliaFormatter\"]); Pkg.precompile()'"
     }
 }

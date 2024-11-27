@@ -4,7 +4,9 @@
         "dockerfile": "Dockerfile"
     },
     "features": {
-        "ghcr.io/julialang/devcontainer-features/julia:1": {}
+        "ghcr.io/julialang/devcontainer-features/julia:1": {
+            "version": "1.9"
+        }
     },
     "customizations": {
         "vscode": {
@@ -12,10 +14,8 @@
                 "julialang.language-julia"
             ]
         }
+    },
+    "postCreateCommand": {
+        "julia-packages": "julia --startup-file=no -e 'using Pkg; Pkg.add([\"PkgTemplates\", \"JuliaFormatter\"]); Pkg.precompile()'"
     }
-    //"postCreateCommand": "echo 'Test command'"
-    //"postCreateCommand": {
-    //    "1-julia-activate": "/usr/local/julia-devcontainer-features/postcreate.jl",
-    //    "2-julia-packages": "julia --startup-file=no -e 'using Pkg; Pkg.add([\"PkgTemplates\", \"JuliaFormatter\"]); Pkg.precompile()'"
-    //}
 }

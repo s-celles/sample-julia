@@ -12,5 +12,6 @@
                 "julialang.language-julia"
             ]
         }
-    }
+    },
+    "postCreateCommand": "julia --startup-file=no -e 'using Pkg; Pkg.add([\"PkgTemplates\", \"JuliaFormatter\"]); Pkg.precompile()'"
 }

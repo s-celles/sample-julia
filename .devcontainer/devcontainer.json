@@ -1,6 +1,8 @@
 {
     "name": "Julia Development",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
     "features": {
         "ghcr.io/julialang/devcontainer-features/julia:1": {}
     },

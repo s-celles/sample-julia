@@ -1,7 +1,8 @@
 {
     "name": "Julia Development",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-        "ghcr.io/julialang/devcontainer-features/julia:1": { }
+        "ghcr.io/julialang/devcontainer-features/julia:1": {}
     },
     "customizations": {
         "vscode": {

@@ -1,12 +1,13 @@
 {
     "name": "Julia Development",
     "build": {
-        "dockerfile": "Dockerfile"
+        "dockerfile": "Dockerfile",
+        "context": ".."
     },
     "features": {
         "ghcr.io/julialang/devcontainer-features/julia:1": {}
     },
-    //"postCreateCommand": "julia --startup-file=no -e 'using Pkg; Pkg.add([\"PkgTemplates\", \"JuliaFormatter\"]); Pkg.precompile()'",
+    "postCreateCommand": "julia --startup-file=no -e 'using Pkg; Pkg.add([\"PkgTemplates\", \"JuliaFormatter\"]); Pkg.precompile()'",
     "customizations": {
         "vscode": {
             "extensions": [

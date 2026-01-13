@@ -1,0 +1,10 @@
+{
+    "[julia]": {
+        "editor.defaultFormatter": "julialang.language-julia",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
+    },
+    "julia.enableCrashReporter": false,
+    "julia.enableTelemetry": false,
+    "julia.execution.resultType": "inline",
+}

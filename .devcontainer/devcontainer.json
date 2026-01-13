@@ -1,0 +1,22 @@
+{
+    "name": "Julia Development",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/julialang/devcontainer-features/julia:1": {
+        //    "channel": "lts"  // "release", "lts", "nightly" or any other juliaup channel (juliaup list)
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "julialang.language-julia"
+            ]
+        }
+    },
+    "containerEnv": {
+        "PATH": "/home/vscode/.juliaup/bin:${PATH}"
+    },
+    "postCreateCommand": "julia --startup-file=no -e 'using Pkg; Pkg.add([\"PkgTemplates\", \"JuliaFormatter\"]); Pkg.precompile()'"
+}

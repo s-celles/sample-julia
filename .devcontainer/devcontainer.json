@@ -1,3 +1,4 @@
+// For format details, see https://aka.ms/devcontainer.json.
 {
     "name": "Julia Development",
     "build": {
@@ -18,5 +19,6 @@
     "containerEnv": {
         "PATH": "/home/vscode/.juliaup/bin:${PATH}"
     },
-    "postCreateCommand": "julia --startup-file=no -e 'using Pkg; Pkg.add([\"PkgTemplates\", \"JuliaFormatter\"]); Pkg.precompile()'"
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "julia --project=. -e 'using Pkg; Pkg.instantiate()' && julia --project=. src/SampleJulia.jl"
 }

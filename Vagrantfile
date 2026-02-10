@@ -13,6 +13,9 @@ Vagrant.configure("2") do |config|
 
   config.vm.hostname = "sample-julia-dev"
 
+  # Disk size (requires vagrant-disksize plugin: vagrant plugin install vagrant-disksize)
+  config.disksize.size = "40GB"
+
   # VirtualBox provider settings
   config.vm.provider "virtualbox" do |vb|
     vb.name = "sample-julia-vagrant"
